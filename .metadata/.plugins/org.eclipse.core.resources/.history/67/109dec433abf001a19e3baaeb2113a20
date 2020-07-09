@@ -1,0 +1,5 @@
+package com.bit.emp.dto;
+
+public class Emp02Bean {
+
+}

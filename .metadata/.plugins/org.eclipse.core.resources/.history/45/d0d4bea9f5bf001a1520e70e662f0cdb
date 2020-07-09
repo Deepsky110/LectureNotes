@@ -1,0 +1,20 @@
+package com.bit.util;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class MyOracle {
+	private static Connection conn;
+	
+	private MyOracle() {}
+	
+	public static Connection getConn() throws SQLException{
+		
+		if(conn==null||conn.isClosed()){
+			conn=DriverManager.getConnection(url,user,password);
+		}
+		
+		return conn; // 필드값 리턴
+		
+	}
+}

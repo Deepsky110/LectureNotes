@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <style rel="stylesheet" type="text/css">
+        div {
+            background-color: lightgray;
+            width: 1024px;
+            margin: 0px auto; /* 위아래 좌우 */
+            /* margin: 0px 0px 0px 0px 12시부터 시계방향으로 */
+        }
+
+        #menu, #footer{
+            text-align: center;
+            background-color: gray;
+        }
+        #content{
+            width: 800px;
+            height: 600px;
+            display: inline-block;
+        }
+        .article{
+            width: 215px;
+            height: 600px;
+            display: inline-block;
+        }
+        .article>a>img{
+            width: 100%;
+        }
+        #menu{}
+        #menu>ul{}
+        #menu>ul>li{
+            background-color: darkgray;
+            width: 100px;
+            display: inline-block;
+        }
+        #menu>ul>li>a{
+            display: block;
+            text-decoration: none;
+            color: white;
+        } /* 블럭을 클릭해도 링크로 가지게 */
+        #menu>ul>li>a:hover{
+            background-color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="img/logo.png" />
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#">[munu1]</a></li>
+            <li><a href="#">[munu2]</a></li>
+            <li><a href="#">[munu3]</a></li>
+            <li><a href="#">[munu4]</a></li>
+        </ul>
+    </div>
+    <div>
+        <div id="content">
+        <h1>환영합니다</h1>
+        <p>이곳은 비트캠프 사이트입니다</p>
+        <p>상담 문의 ~~~~ </p>
+        <p>상담 문의 ~~~~ </p>
+        <p>상담 문의 ~~~~ </p>
+        <p>상담 문의 ~~~~ </p>
+        <p>상담 문의 ~~~~ </p>
+        </div>
+        <div class="article">
+            <a href="http://google.com"><img src="img/google.png"></a>
+            <a href="http://naver.com"><img src="img/naver.png"></a>
+            <a href="http://daum.net"><img src="img/daum.png"></a>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 비트캠프 All rights reserved.
+    </div>
+</body></html>

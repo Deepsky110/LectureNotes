@@ -1,0 +1,17 @@
+/*
+주석 (한줄 주석 없음)
+오류 가능성이 있어서 가장 마지막에 주석 처리하는 경우가 많음
+*/
+h1 {
+    color: red;
+}
+
+h2 {
+    color: white;
+    background-color: #ccc222;
+}
+
+h3 {
+    color: magenta;
+}
+

@@ -1,0 +1,14 @@
+package com.bit.emp;
+
+public class Emp02Insert {
+
+	public void emp02Insert(){
+		String sql = "{call emp02insert(5555,'ȫ�浿',5555)}";
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

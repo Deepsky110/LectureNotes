@@ -1,0 +1,11 @@
+package com.bit;
+
+import java.sql.Date;
+
+public class EmpDto {
+	private int sabun;
+	private String name;
+	private Date nalja;
+	private int pay;
+	
+}

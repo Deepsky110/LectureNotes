@@ -1,0 +1,8 @@
+package com.bit.dept;
+
+public class DeptDto {
+	private int num;
+	private String id;
+	private String name;
+	private int lev;
+}

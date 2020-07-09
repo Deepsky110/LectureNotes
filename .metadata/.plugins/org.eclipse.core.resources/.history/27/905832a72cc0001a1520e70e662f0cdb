@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+		<tr>
+			<td align="center" bgcolor="#cccccc">
+				<a href="<%=path %>index.jsp">[HOME]</a>
+				<a href="<%=path %>emp/list.jsp">[E M P]</a>
+				<a href="<%=path %>dept/list.jsp">[DEPT]</a>
+				<%
+				session.getAttribute("login");
+				if(login.isResult()){
+				%>
+				<a href="<%=path %>login/form.jsp">[LOGIN]</a>
+				<%}else{ %>
+				<a href="<%=path %>login/form.jsp">[LOGOUT]</a>
+				<%} %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<!-- content start -->

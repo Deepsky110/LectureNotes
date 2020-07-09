@@ -1,0 +1,11 @@
+package com.bit.emp;
+
+import java.util.ArrayList;
+
+public class EmpCRUD {
+
+	public static ArrayList list(){
+		ArrayList list = new ArrayList();
+		String sql = "select * from emp"
+	}
+}

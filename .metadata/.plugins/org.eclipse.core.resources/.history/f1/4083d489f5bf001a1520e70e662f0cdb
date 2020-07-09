@@ -1,0 +1,14 @@
+package com.bit.util;
+
+import java.sql.Connection;
+
+public class MyOracle {
+	private static Connection conn;
+	
+	private MyOracle() {}
+	
+	public static Connection getConn(){
+		return conn; // 필드값 리턴
+		
+	}
+}

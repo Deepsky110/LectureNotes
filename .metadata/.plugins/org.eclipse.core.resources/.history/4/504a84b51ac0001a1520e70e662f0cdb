@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+	<table width="1024" align="center">
+	<jsp:useBean id="bean" class="com.bit.emp.EmpDto" scopr="request"></jsp:useBean>
+		<tr>
+			<td>
+				<%=request.getParameter("bean") %>
+				<img alt="" src="<%=request.getParameter("path") %>img/logo.png">
+			</td>
+		</tr>

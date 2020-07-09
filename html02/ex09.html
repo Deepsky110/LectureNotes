@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            input[type='text']{ /* t로 시작하는 문자~ */
+                color: red;
+            }
+            button{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>속성선택자</h1>
+        <form>
+            <div>
+                <label for="id">id</label>
+                <input type="text" id="id"/> <!-- html5에서는 반드시 태그를 열면 닫을 것! -->
+                <!-- input의 id와 labe의 id가 묶임 -->
+            </div>
+            <div>
+                <label for="pw">pw</label>
+                <input type="password" id="pw"/>
+            </div>
+            <div>
+                <label for="name">name</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <input type="color"/><br/>
+                <input type="tel"/><br/> <!-- 모바일에서 번호형 자판으로 입력 -->
+                <input type="email"/><br/>
+                <!-- @를 포함한 이메일 규격으로만 입력 제한
+                    모바일에서 입력시 자판 일부가 @, .com로 변경 -->
+                <input type="number"/><br/> <!-- 숫자 입력형 자판 -->
+                <input type="url"/><br/>
+                <input type="date" name="nalja"/><br/>
+                <input type="time" name="time"/><br/>
+                <input type="datetime-local"/><br/>
+                <input type="range" min="1" max="50"/>
+            </div>
+            <div>
+                <button>보내기</button>
+                <!-- form태그 안의 버튼은 submit이 없다면 기본 속성인 submit 속성을 가짐 -->
+                <input type="submit" value="전송"/>
+                <input type="reset" value="취소"/>
+            </div>
+        </form>
+    </body>
+</html>

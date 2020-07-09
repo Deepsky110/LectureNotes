@@ -1,0 +1,31 @@
+package com.bit.emp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Oracle {
+	Connection conn;
+	
+	Connection getConnection(){
+		String driver="oracle.jdbc.driver.OracleDriver";
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="scott";
+		String password="tiger";
+		try {
+			Class.forName(driver);
+			conn=DriverManager.getConnection(url, user, password);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return conn; //그냥 리턴하면 null을 리턴받아서 커넥션을 채워줘야함
+	}
+
+	public static void main(String[] args) {
+		Oracle me = new Oracle();
+		System.out.println(me.getConnection()!=null);
+	}
+
+}

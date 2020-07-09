@@ -1,0 +1,42 @@
+package com.bit.emp;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Emp02list {
+
+	public void list() {
+		String sql = "{call emp02list(?)}";
+		Connection conn = null;
+		CallableStatement cstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = Oracle.getConnection();
+			cstmt = conn.prepareCall(sql);
+			
+			cstmt.execute();
+			rs = cstmt.getObject(1);
+			while(rs.next()){
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(rs!=null) rs.close();
+				if(cstmt!=null) cstmt.close();
+				if(conn!=null) conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

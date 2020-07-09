@@ -1,0 +1,29 @@
+package com.bit.emp;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Emp02Insert {
+
+	public void emp02Insert(int sabun, Strign name, int pay){
+		// sql = {call 프로시져명}
+		String sql = "{call emp02insert("+sabun+",'"+name+"',"+pay+")}";
+		Connection conn = null;
+		try {
+			conn = Oracle.getConnection();
+			conn.prepareCall(sql);
+		} finally {
+			try {
+				if(conn!=null)conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

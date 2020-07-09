@@ -1,0 +1,17 @@
+package com.bit.emp;
+
+public class Emp02Insert {
+
+	public void emp02Insert(){
+		// sql = {call 프로시져명}
+		String sql = "{call emp02insert("+sabun+",'"+name+"',"+pay+")}";
+		Connection conn = null;
+		conn = Oracle.getConnection();
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

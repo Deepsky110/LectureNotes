@@ -1,0 +1,13 @@
+package com.bit.emp;
+
+public class Emp02Delete {
+	
+	public void delete(int sabun){
+		String sql="{call emp02delete("+sabun+")}";
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

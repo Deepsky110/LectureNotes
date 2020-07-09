@@ -1,0 +1,52 @@
+<doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            div{color: aqua;}
+            div>h2{color: blueviolet;} /* div아래에 있는 h2 선택 */
+            div+p{color: coral;}
+            div+p+p{color: chocolate;} /* +로 다음 항목을 순차적으로 선택 */
+            div+p+p+ul{background-color: crimson;}
+            h1+h2+div+p+p+ul{color: yellow;}
+            div~p{color: deeppink;} /* div 다음의 p태그들 */
+            /* ul>li>ol{background-color: darkkhaki;} */
+            ul ol{background-color: darkkhaki;} /* ul의 자식을 포함한 자손... */
+            li:first-child{color: darkcyan;}
+            ol>li:first-child{color: blue;}
+            li:last-child{color: dodgerblue;}
+            ol>li:last-child{color: firebrick;}
+            li:nth-child(3){color:blueviolet;}
+            li:nth-child(odd){color:fuchsia;} /* odd:홀수, even:짝수 */
+            li:nth-child(2n-1){color:red;}
+        </style>
+    </head>
+    <body>
+        <h1>선택자</h1>
+        <h2>선택자1</h2>
+        <div>
+            <h2>선택자2</h2>
+            <p>선택자2-1</p>
+        </div>
+        <p>선택자2</p>
+        <p>선택자3</p>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+                <ol>
+                    <li>item3</li>
+                    <li>item4</li>
+                    <li>item5</li>
+                </ol>
+            <li>item6</li>
+        </ul>
+        <ol>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+        </ol>
+    </body>
+</html>

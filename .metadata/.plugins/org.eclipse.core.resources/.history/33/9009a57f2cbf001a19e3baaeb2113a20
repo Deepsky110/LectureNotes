@@ -1,0 +1,14 @@
+package com.bit.emp;
+
+public class Emp02Insert {
+
+	public emp02Insert(){
+		String sql = "execute emp02insert()";
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

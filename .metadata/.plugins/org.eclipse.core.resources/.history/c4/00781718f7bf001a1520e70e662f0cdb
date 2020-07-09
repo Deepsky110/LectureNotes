@@ -1,0 +1,6 @@
+package com.bit.emp;
+
+// javaBean => DTO(Data Transfer Object)
+public class EmpDto {
+	
+}

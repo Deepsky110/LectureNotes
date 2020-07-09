@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body bgcolor="ligntgray">
+	<table width="1024" align="center:" bgcolor="white">
+		<tr>
+			<td>
+			<img src="img/logo.png">
+			</td>
+		</tr>
+		<tr>
+			<td align="center" bgcolor="lightgray">
+				<font color="white">
+				<a href="index.jps">[HOME]</a>
+				<a href="emp/list.jsp">[E M P]</a>
+				<a href="dept/list.jsp">[DEPT]</a>
+				<a href="login/form.jsp">[LOGIN]</a>
+				</font>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

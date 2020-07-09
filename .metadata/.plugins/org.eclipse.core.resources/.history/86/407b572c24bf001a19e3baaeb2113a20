@@ -1,0 +1,20 @@
+package com.bit.emp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Oracle {
+	Connection conn;
+	
+	Connection getConnection(){
+		String url="jdbc:oracle:thin@localhost:1521:xe";
+		conn=DriverManager.getConnection(url, user, password);
+		return conn; //그냥 리턴하면 null을 리턴받아서 커넥션을 채워줘야함
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

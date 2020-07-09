@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            body{
+                margin: 0pt;
+            }
+            h1{
+                margin: 0px;
+                background-color: aqua;
+            }
+            h1~p{
+                margin: 0px; /* 줄간격 설정
+                left, rignt, bottom, top 세부 옵션 존재 */
+                width: 100px; /* 단위 필수!!! */
+                height: 50px;
+                background-color: pink;
+            }
+            div{
+                background-color: green;
+                /* 기본으로 간격 설정이 없는 경우도 있음 */
+            }
+            table,th,td{
+                /* border-spacing: 0px;
+                간격만 없애서 겹치는 부분은 두께가 두배*/
+                border-collapse: collapse;
+                /* 선이 겹치는 부분은 하나로 처리 */
+                margin: 0px;
+                border-width: 1px; /* 선의 두께 */
+                border-color: red;
+                border-style: solid; /* 선 종류 */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>속성</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <div>
+            <h2>제목</h2>
+            <p>내용</p>
+        </div>
+        <table>
+            <tr>
+                <th>col1</th>
+                <th>col2</th>
+                <th>col3</th>
+                <th>col4</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </body>
+</html>

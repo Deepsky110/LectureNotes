@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+java.sql.Connection conn;
+java.sql.Statement stmt;
+java.sql.ResultSet rs;
+String driver = "oracle.jdbc.driver.OracleDriver";
+String url = "jdbc:oracle:thin:@localhost:1521:xe"
+%>
+<%
+String param1=request.getParameter("name");
+String param2=request.getParameter("pay");
+
+String name = param1.trim(); // 공백 못들어오게 trim()
+int pay = Integer.parseInt(param2.trim());
+
+String sql = "insert into emp01 values (emp01_seq.nextval,"+name+",sysdate,"+pay+")";
+
+
+response.sendRedirect("list.jsp");
+%>
+</body>
+</html>

@@ -1,0 +1,32 @@
+package com.bit.emp;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import com.bit.util.MyOracle;
+
+public class EmpCRUD {
+
+	public static ArrayList list(){
+		ArrayList list = new ArrayList();
+		String sql = "select * from emp02";
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		try {
+			conn = MyOracle.getConn();
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			while(rs.next()){
+				
+				list.add(bean);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+}

@@ -1,0 +1,25 @@
+package com.bit.dept;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class DeptCRUD {
+	private Connection conn;
+	private Statement stmt;
+	private ResultSet rs;
+	
+	public ArrayList<DeptDto> list() throws SQLException{
+		ArrayList<DeptDto> list = new ArrayList<DeptDto>();
+		String sql = "select * from dept order by num desc";
+		try{
+			
+		} finally {
+			if(rs!=null)rs.close();
+		}
+		
+		return list;
+	}
+}

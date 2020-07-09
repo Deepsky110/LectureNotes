@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+		<tr>
+			<td align="center" bgcolor="gray">
+				<font color="white">
+				<a href="/web05/index.jps" style="color:white;">[HOME]</a>
+				<a href="/web05/emp/list.jsp" style="color:white;">[E M P]</a>
+				<a href="/web05/dept/list.jsp" style="color:white;">[DEPT]</a>
+				<a href="/web05/login/form.jsp" style="color:white;">[LOGIN]</a>
+				</font>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<!-- cotent start -->

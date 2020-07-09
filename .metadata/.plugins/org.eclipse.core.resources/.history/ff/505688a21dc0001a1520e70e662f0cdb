@@ -1,0 +1,52 @@
+<%@page import="com.bit.dept.DeptDto"%>
+<%@page import="com.bit.dept.DeptCRUD"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+// useBean scope
+//		page(default) < request < session < application
+%>
+<jsp:include page="/template/header.jsp">
+	<jsp:param value="../" name="path"/>
+</jsp:include>
+<jsp:include page="../template/menu.jsp">
+	<jsp:param value="../" name="path"/>
+</jsp:include>
+<%-- <%@ include file="/template/header.jspf" %> <!-- 절대경로 --> --%>
+<%-- <%@ include file="../template/menu.jspf" %> <!-- 상대경로 --> --%>
+	<h1>DEPT01 LIST</h1>
+	<table width="800">
+		<tr>
+			<th>번호</th>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>레벨</th>
+		</tr>
+		<%
+		DeptCRUD crud = new DeptCRUD();
+		// for num in 1...10
+		// 개선된 루프문(jdk 1.5~)
+		ArrayList<DeptDto> list = crud.list();
+		for(DeptDto bean : list){ // crud.list()에서 하나씩 뽑아서 bean에다 넣는다
+		%>
+		<tr>
+			<td><a><%=bean.getNum() %></a></td>
+			<td><a><%=bean.getId() %></a></td>
+			<td><a><%=bean.getName() %></a></td>
+			<td><a><%=bean.getLev() %></a></td>
+		</tr>
+		<%
+		}
+		%>
+	</table>
+<jsp:include page="./../template/footer.jsp"></jsp:include>
+<%-- <%@ include file="./../template/footer.jspf" %> --%>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>web07</display-name>
+  <welcome-file-list>
+    <welcome-file>ex01.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet> <!-- 서블릿 등록 -->
+  	<servlet-name>ex02</servlet-name>
+  	<servlet-class>com.bit.web07.Ex02</servlet-class>
+  </servlet>
+  <servlet-mapping> <!-- 어떤 주소로 왔을때 실행될지 -->
+  	<servlet-name>ex02</servlet-name>
+  	<url-pattern>/ex02.naver</url-pattern>
+  </servlet-mapping>
+</web-app>
