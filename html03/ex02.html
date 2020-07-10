@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            h1,p{
+                background-color: skyblue;
+            }
+            p{
+                width: 200px;
+                height: 100px;
+                /* 영역을 작게 지정해도 text는 다 표시됨 */
+                /* overflow-x: auto;
+                overflow-y: scroll;
+                영역을 넘어간 부분을 어떻게 처리할 것인가?*/
+                overflow: hidden; /* 렌더링 다시 함 */
+            }
+            nav{
+                background-color: rebeccapurple;
+                overflow: hidden;
+            }
+            ul{
+                background-color: aquamarine;
+                overflow: hidden;
+                padding: 0px;
+                width: 404px; /* li가 border-left로 1px씩 사이 공간이 생김 */
+                margin: 5px auto;
+                border-radius: 10px;
+            }
+            ul>li{
+                border-left: 1px solid red;
+                float: left; /* li를 띄워버려서 다른 요소들은 뒤로 숨겨짐
+                ul에 오버플로우 hidden으로 재렌더링 => 속성이 다시 보임 */
+                display: inline-block;
+                text-align: center;
+                width: 100px;
+                height: 50px;
+                line-height: 50px; /* 높이만큼 지정하면 가운데 오는 스킬 */
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>제목</h1>
+        <nav>
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+            </ul>
+        </nav>
+        <p>[STN스포츠=이형주 기자]
+해리 케인(26)이 주제 무리뉴(57) 감독의 전술 속에 갇혔다. 
+토트넘 핫스퍼는 10일(한국시간) 영국 사우스웨스트잉글랜드지역 도싯주의 본머스에 위치한 바이탈리티 스타디움에서 열린 2019/20시즌 잉글리시 프리미어리그(EPL) 34라운드 AFC 본머스와의 경기에서 0-0으로 무승부를 거뒀다.
+토트넘이 지난 33라운드 셰필드 유나이티드전 완패에 이어 또 한 번의 졸전을 펼쳤다. 토트넘은 강등권 본머스를 상대로 시종일관 압도당하며 공격을 하지 못했다. 심지어 유효 슛을 경기 동안 기록하지 못했다.
+토트넘 공격의 핵인 해리 케인과 손흥민도 무리뉴의 전술 속에 갇혀 있다. 케인은 수비형 미드필더, 손흥민(28)은 윙백처럼 뛰는 것이 알려진 지 오래다. 이번 경기 손흥민은 체력 안배를 위해 교체 출전해 이날 경기에서는 그나마 그런 경향이 적었지만, 케인은 또 한 번 수비형 미드필더처럼 뛰었다. 
+10일 축구 통계 사이트 후스코어드 닷컴이 공개한 히트맵에 따르면 케인은 전방위적 히트맵 분포를 보였다. 대개 중앙 미드필더 혹은 수비형 미드필더들에게서 나오는 분포다. 이해를 돕기 위해 제시된 상대편 공격수 요슈아 킹(28)의 히트맵(좌측)과 비교하면, 차이는 더욱 두드러진다. 
+공격수는 골을 넣어야 하는 포지션이다. 많은 움직임을 가져가면 좋지만, 골문 근처에 있어야 득점 확률이 높아진다. 상대 공격수 킹이 토트넘 박스 주위를 돌아다닌 것에 비해, 케인은 자신의 진영 깊숙한 곳까지 가 수비 백업을 했다. 개탄스러운 현실이다. </p>
+    </body>
+</html>

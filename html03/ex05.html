@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            #menu{
+                overflow: hidden;
+                background-color: gray;
+            }
+            #menu>ul{
+                overflow: hidden;
+                width: 607px;
+                padding: 0px;
+                margin: 5px auto;
+            }
+            #menu>ul>li{
+                border-left: 1px solid white;
+                list-style: none;
+                width: 100px;
+                float: left;
+                height: 50px;
+                display: block;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                transition-duration: 3s;
+                overflow: hidden;
+            }
+            #menu>ul>li: last-child{
+                border-right: 1px solid white;
+            }
+            #menu>ul>li{
+                height: 50px;
+                display: block;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                transition-duration: 3s;
+                overflow: hidden;
+            }
+            #menu>ul>li>ol{
+                margin-top:25px;
+            }
+            #menu>ul>li:hover{
+                color: cornflowerblue;
+                height: 200px;
+            }
+            #header{}
+            #header>h1{
+                width: 213px;
+                height: 61px;
+                background-image:url(img/logo.png);
+                text-indent: -999px; /* 왼쪽 창 너머로 숨김 */
+            }
+            #section{
+                width: 70%;
+                float: left;
+                background-color: cadetblue;
+            }
+            .article{
+                width: 30%
+                float: left;
+                background-color: bisque;
+            }
+            .article>a{
+                display:block;
+            }
+            .article>a:first-child{
+                background-image:url(img/naver.png);
+                background-size: 10%;
+                height: 70px;
+                text-indent: -99999px;
+                
+            }
+            #footer{
+                clear: both;
+                background-color: gray;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="header">
+            <h1>비트교육센터</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">비트캠프</a></li>
+                <li><a href="#">교육센터</a></li>
+                <li>교육과정
+                    <ol>
+                        <li><a href="#">3-1</a></li>
+                        <li><a href="#">3-2</a></li>
+                        <li><a href="#">3-3</a></li>
+                        <li><a href="#">3-4</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">커뮤니티</a></li>
+                <li><a href="#">지원센터</a></li>
+                <li><a href="#">멘토링</a></li>
+            </ul>
+        </div>
+        <div id="section">
+            <h2>Java</h2>
+            <p>[STN스포츠=이형주 기자]
+해리 케인(26)이 주제 무리뉴(57) 감독의 전술 속에 갇혔다. 
+토트넘 핫스퍼는 10일(한국시간) 영국 사우스웨스트잉글랜드지역 도싯주의 본머스에 위치한 바이탈리티 스타디움에서 열린 2019/20시즌 잉글리시 프리미어리그(EPL) 34라운드 AFC 본머스와의 경기에서 0-0으로 무승부를 거뒀다.
+토트넘이 지난 33라운드 셰필드 유나이티드전 완패에 이어 또 한 번의 졸전을 펼쳤다. 토트넘은 강등권 본머스를 상대로 시종일관 압도당하며 공격을 하지 못했다. 심지어 유효 슛을 경기 동안 기록하지 못했다.
+토트넘 공격의 핵인 해리 케인과 손흥민도 무리뉴의 전술 속에 갇혀 있다. 케인은 수비형 미드필더, 손흥민(28)은 윙백처럼 뛰는 것이 알려진 지 오래다. 이번 경기 손흥민은 체력 안배를 위해 교체 출전해 이날 경기에서는 그나마 그런 경향이 적었지만, 케인은 또 한 번 수비형 미드필더처럼 뛰었다</p>
+        </div>
+        <div class="article">
+            <a href="http://naver.com">네이버</a>
+            <a href="http://google.com">구글</a>
+            <a href="http://daum.net">다음</a>
+        </div>
+        <div id="footer">
+            Copyright &copy; 비트캠프 All rights reserved.
+        </div>
+    </body>
+</html>

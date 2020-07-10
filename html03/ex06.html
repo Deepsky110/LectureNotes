@@ -1,0 +1,35 @@
+<!doctype html>
+<!--animation-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            a{
+                width: 100px;
+                height: 100px;
+                display: block;
+                background-image: url(img/car.png);
+                background-size: 100px;
+                background-repeat: no-repeat;
+                background-position: right;
+                transition-duration: 3s;
+            }
+            a:nth-child(1){
+                transition-timing-function: ease-in; /* 점점 빨리지기 */
+                transition-delay: 1s;
+            }
+            a:nth-child(2){
+                transition-timing-function: ease-out; /* 점점 느려지기 */
+            }
+            a:hover{
+                width: 500px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <a href="#">item1</a>
+        <a href="#">item2</a>
+        
+    </body>
+</html>

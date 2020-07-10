@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            div{
+                width: 150px;
+                height: 150px;
+                background-color: gray;
+               
+            }
+            body>div:first-child{background-color: #ff0000;}
+            body>div:nth-child(3){background-color: #00ff00;}
+            body>div:nth-child(4){background-color: #0000ff;}
+            
+            body>div:nth-child(2){
+                position: absolute; 절대 좌표로
+                static속성이 아닌 부모를 기준으로 위치 지정
+                top: 0px;
+                left: 0px;
+                /* position: relative; 상대 좌표!
+                static일 때의 위치를 기준으로 위치 조정
+                top: -50px;
+                left: 50px;  */
+                /* position: fixed;
+                지정 위치에 고정, 마우스 스크롤에 영향x
+                top: 0px;
+                left: 0px; */
+            }
+            div>div{
+                position: relative;
+                opacity: 0.8; /* 투명도 */
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>box1</div>
+        <div>box2
+            <div>box2-2</div>
+        </div>
+        <div>box3</div>
+        <div>box4</div>
+    </body>
+</html>
