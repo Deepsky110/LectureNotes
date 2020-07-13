@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style rel="stylesheet" type="text/css">
+        div {
+            height: 401px;
+            border-bottom: 1px solid gray;
+        }
+
+        div>span {
+            display: inline-block;
+            margin-top: 300px;
+            width: 100px;
+            height: 90px;
+            background-image: url(img/ball.png);
+            background-repeat: no-repeat;
+            background-size: 90px;
+            animation-name: ani1;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /*            animation-play-state: paused;*/
+            animation-play-state: running;
+        }
+
+        @keyframes ani1 {
+            form {
+                margin-top: 300px;
+                transform: rotate(0deg);
+                /*                transform: scale(1);*/
+            }
+
+            to {
+                margin-top: 0px;
+                transform: rotate(360deg);
+                /*                transform: scale(3);*/
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>
+        </span>
+    </div>
+</body></html>
