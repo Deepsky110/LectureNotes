@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<script type="text/javascript">
+    // js에는 함수와 메서드가 존재
+    // java에는 메서드만 있음
+    // pl에는 함수만 있음
+    
+    var obj={'key1':'val1', 'key2':function(){}}; // 메서드
+    var obj = new Object();
+    obj.key1='val1';
+    obj.key2=function(){};
+    // 객체를 통해 사용하는 것은 메서드
+    // 바로 호출해서 사용할 수 있는 것은 함수
+    
+    function fun(a){
+        console.log(typeof a);
+        if(typeof a=='function') a();
+        else if((typeof a)=='string') console.log(a);
+        else if((typeof a)=='number') console.log(a+1);
+        else console.log(a[0]);
+    }
+    
+    fun(function(){console.log('test');}) // 결과 function / test
+                         
+</script>
+</head>
+
+	<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--자바스크립트 : function타입-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<script type="text/javascript">
+    // func01(); // 호출 순서 상관 없음
+    // func01();
+    var x = 1234; // 전역변수
+    function func01(){ // 인자를 받을 수 있음
+        // var x=4321; // 지역변수
+        // console.log('func01 x= '+typeof arguments); //object
+        if(arguments[1]) {
+            return arguments[0]+arguments[1];
+        } else if(arguments[0]) {
+            return arguments[0];
+        }
+        /*
+        for(var idx in arguments){
+            console.log(arguments[idx]);
+            // 선언 당시 인자가 없어도 끌어다 쓰기 가능
+        }
+        */
+        
+        return 0;
+        // 모든 function은 리턴 존재
+        // 리턴 value 유무에 따라 명시할지 결정
+        // 리턴 value가 없다면? - 호출했을 때 undefined
+    }
+    var a = func01(1,10); // 11
+    console.log('a=' +a);
+</script>
+</head>
+
+	<body>
+
+</body>
+</html>

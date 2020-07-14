@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<script type="text/javascript">
+    /*
+    var a=1234;
+    window['a']=1234; //문자열 a가 들어가는 것
+    */
+    // window.objkey=new Object();
+    var objkey=new Object(); // === // key value가 없는 것
+    var objkey2={}; // === // key value가 없는 것
+    var obj={};
+    obj['key1']='val1';
+    obj.key2='val2'; // obj의 문자열 'key2'
+    obj[objkey]='val3';
+    obj.objkey='val4';
+    // window.obj.objkey='val4'; // 위의 objkey와 다르다
+    
+    console.log(obj.key1); // val1
+    console.log(obj['key2']); // val2
+    console.log(obj[objkey]); // val3
+    console.log(obj.objkey); // val4
+    /*
+    for(var key in obj){
+        console.log(key, obj[key]);
+    }
+    */
+
+    
+</script>
+</head>
+
+	<body>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--자바스크립트 function 지역변수-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<script type="text/javascript">
+    //방법1
+    
+    // callback 함수 - 특정 시점에 호출되는 함수
+    var fn01 = function (){ // function의 이름이 존재하지 않음, 호출불가
+        console.log("func01 run..");
+        console.log(typeof fn01)
+    };
+    
+    function fn02(a) { // fn02는 변수명, 호출 가능
+        console.log('fn02 run..');
+        console.log(typeof a);
+        a(); // 내가 만들어서 내가 호출하는게 보통...but callback함수는?
+    };
+    fn02(fn01);
+    // fn02(1111) -> Number타입
+    // fn02(문자열) -> string타입
+    // fn02(fn01) -> function타입
+    
+    var arr=[1,3,5,7];
+    var fn03=function(a,b){
+        console.log(a,b) // value, idx
+        return b-a;
+    };
+    // arr.forEach(fn03); //호출한 것은 아니다 인자로 넣은것일 뿐
+    // 알아서 호출한 것
+    arr.sort(fn03);
+    console.log(arr);
+    
+    /*
+    방법2
+    // 익명함수 function func01(){...}에서 func01을 생략
+    // 한번만 사용할것이라 생략
+    (function (){
+        console.log("func01 run..");
+    })();
+    
+    방법3
+    (function func01(){
+        var a=1234; // 지역변수
+        var b=4321;
+        console.log(a+b);
+    })();
+    // 함수 전체를 이름으로, func01()에서 func를 함수문장으로 대체
+    */
+</script>
+</head>
+
+	<body>
+
+</body>
+</html>

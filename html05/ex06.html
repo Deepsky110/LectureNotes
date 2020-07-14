@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--클로저-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+</head>
+<script text="text/javascript">
+    // 클로저
+    // 변수의 라이프사이클을 벗어나서 계속 사용 가능
+    
+    /*
+    function func01(){
+        var z=function(){console.log('test');};
+        return z;
+    }
+    var a=func01();
+    a();
+    */
+    
+    function func02(){
+        var obj={'key1':'val1'}; // 지역변수
+        return function(){
+            console.log('test func02..'+obj.key1);
+        }; // 지역변수는 리턴 받을 때 라이프사이클이 끝나는게 정상
+    }
+    var a=func02();
+    a();
+    
+</script>
+	<body>
+
+</body>
+</html>
