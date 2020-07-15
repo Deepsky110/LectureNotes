@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--js : web에서 제공하는 기능들-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+</head>
+<script type="text/javascript">
+    window.console.log('출력');
+//    window.alert('알림');
+//    var result1 = window.confirm('확인'); // 확인or취소 선택
+//    console.log(result1); // 확인,취소 누른 값을 리턴 (T/F)
+//    var msg = window.prompt('메세지를 입력하세요','디폴트값');
+//    console.log(msg);
+    var cnt = 0;
+    var callback = function(){
+        console.log('callback...'+(++cnt));  
+    };
+//    window.setTimeout(callback,3000); //3000밀리세컨즈(3초) 후 callback함
+    var target = window.setInterval(callback,1000);
+    //1000밀리세컨즈 마다 반복 실행
+    var target2 = window.setTimeout(function(){
+        window.clearInterval(target);
+    },5000);
+    window.clearTimeout(target2);
+    
+</script>
+	<body>
+
+</body>
+</html>
+

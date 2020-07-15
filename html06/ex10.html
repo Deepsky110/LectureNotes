@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--애니메이션-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+	
+<style rel="stylesheet" type="text/css">
+    h1+div{
+        background-color: gray;
+        overflow: hidden; // 넘치는걸 가린다
+        height: 320px;
+        width: 960px;
+    }
+    h1+div>ul{
+        padding: 0px;
+        width: 1920px;
+    }
+    h1+div>ul>li{
+        list-style: none;
+        float: left;
+    }
+    h1+div>ul>li>img{
+        
+    }
+</style>
+</head>
+
+<body>
+    <h1>애니메이션</h1>
+    <div>
+        <ul>
+            <li><img src="img/img01.jpg"/></li>            
+            <li><img src="img/img02.jpg"/></li>            
+            <li><img src="img/img03.jpg"/></li>            
+            <li><img src="img/img04.jpg"/></li>            
+            <li><img src="img/img05.jpg"/></li>            
+            <li><img src="img/img06.jpg"/></li>            
+        </ul>
+    </div>
+<script type="text/javascript">
+    var ul=document.querySelector('ul');
+    ul.style.marginLeft='0px';
+    /////////////////////////////
+    var boo=true;
+    function move(){
+        if(parseInt(ul.style.marginLeft)==-1600){
+            boo=false;
+        } else if(parseInt(ul.style.marginLeft)==0) {
+            boo=true;
+        }
+        if(boo){
+            ul.style.marginLeft=parseInt(ul.style.marginLeft)-10+'px';
+        } else {
+            ul.style.marginLeft=parseInt(ul.style.marginLeft)+10+'px';
+        } // 10px씩 이동
+    }
+    setInterval(move, 50);
+</script>
+</body>
+</html>

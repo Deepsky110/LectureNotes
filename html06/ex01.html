@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<script type="text/javascript">
+    /*
+    {'key':'val1','key2':[],'key3':function(){}}
+    
+    var su1=Math.random(); // 0<=random<1
+    su1=Math.abs(-1234); // 절대값
+    su1=Math.round(3.54); // 반올림
+    su1=Math.floor(3.54); // 내림
+    su1=Math.ceil(3.14); // 올림
+    su1=Math.min(3,4); // 3
+    su1=Math.max(5,6); // 6
+    console.log(su1);
+/////////////////////////////////////////////////////////
+    var a=new Date(); // 객체가 생성된 시점의 날짜,시간
+    //var a=new Date(2002,1,1,13,30,0,0);
+    //console.log((a.getYear()+1900)+'년'); // 1900 기준, 사용 지양
+    console.log(a.getFullYear()+'년');
+    console.log((a.getMonth()+1)+'월'); // 0~11
+    console.log(a.getDate()+'일');
+    console.log(a.getHours()+'시');
+    console.log(a.getMinutes()+'분');
+    console.log(a.getSeconds()+'초');
+    console.log(a.getTime()); // 1970년 1월1일 기준 밀리세컨즈
+/////////////////////////////////////////////////////////
+    */
+    var str='{"key1":"value1"}';
+    console.log(str, typeof str); // {"key1":"value1"} string
+    var obj=JSON.parse(str);
+    console.log(obj, typeof obj); // {key1: "value1"} "object"
+    // JSON (JavaScript Object Notation)
+    // 다른 언어에 데이터를 보내려면 '문자열'형식으로 보내야하는데
+    // javascript의 object 타입의 데이터를 보냄
+    
+    var str2=JSON.stringify(obj);
+    console.log(str2, typeof str2); // {"key1":"value1"} string
+    // object를 string으로 바꿈
+</script>
+</head>
+
+	<body>
+
+</body>
+</html>
