@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--DOM Level3-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+    <script type="text/javascript">
+        var input, btn, target;
+        window.onload = function() {
+            // load를 레벨2로 처리하는 이유
+            // 1. 동일한 이름으로 load 하면 처리의 우선순위를 정할 수 없음
+            // 2. remove를 통해 삭제될 수 있음 
+            btn = document.querySelector('button');
+//            btn.onclick=function(){
+//                console.log('level2 click');
+//            };
+//            btn.onclick=function(){ // 둘 중 후자가 처리됨
+//                console.log('레벨2 클릭');
+//            };
+            /////////////////////////////////////////////
+            /*
+            btn.addEventListener('click', function() {
+                console.log('level3 click');
+            }); // 이름이 없어서 불러낼 수 없음
+            */
+//            btn.addEventListener('mouseover',clck)
+            btn.addEventListener('click', clck);
+        };
+            function clck(){
+                btn.removeEventListener('click', clck);
+                // 클릭 후 이벤트리스너 삭제
+                console.log('레벨3 클릭');
+            }
+        
+    </script>
+</head>
+
+<body>
+    <h1>DOM Level3</h1>
+    <input type="text" />
+    <button>입력</button>
+    <div id="target"></div>
+</body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--이벤트로 이미지 움직이기-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<style rel="stylesheet" type="text/css">
+    img{
+        width: 50px;
+    }    
+</style>
+<script type="text/javascript">
+    var car;
+    window.onload=function(){
+        car = document.querySelector('img');
+        car.style.marginLeft='0px';
+        car.style.marginTop='0px';
+        window.onkeydown=function(e){
+//            console.log(e.keyCode); // 특정 키 코드숫자 
+            var limitX = window.innerWidth-50; // 이미지 사이즈만큼 빼줌
+            var limitY = window.innerHeight-50;
+            var x = parseInt(car.style.marginLeft); // x좌표
+            var y = parseInt(car.style.marginTop); // y좌표
+            if(e.keyCode == 40){
+                if(y+5<=limitY){
+                    car.style.marginTop = y+5+"px";
+                }
+            } else if (e.keyCode == 38){
+                if(y-5<0){
+                    car.style.marginTop = "0px";
+                } else {
+                    car.style.marginTop = y-5+"px";
+                }
+            } else if (e.keyCode == 39){
+                if(x+5<=limitX){
+                    car.style.marginLeft = x+5+"px";
+                }
+            } else if (e.keyCode == 37){
+                if(x-5<0){
+                    car.style.marginLeft = "0px";
+                } else {
+                    car.style.marginLeft = x-5+"px";
+                }
+            }
+         };
+    };
+</script>
+</head>
+    
+<body>
+    <img src="img/car.png"/>
+</body>
+</html>

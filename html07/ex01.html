@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+</head>
+<body>
+    <h1>노드생성</h1>
+    <p>내용</p>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+    <ol>
+        
+    </ol>
+    <script type="text/javascript">
+//        var lis=document.getElementsByTagName('li'); // list인데 자바의 순수 list가 아님
+        var lis=document.querySelectorAll('li'); // 배열 ArrayList, node 접근 
+        var ul=document.getElementsByTagName('ul')[0];
+        var ol=document.getElementsByTagName('ol')[0];
+        
+        /* 자바의 반복문이 자바스크립트에서 발전하는 과정
+        for(var i=0; i<lis.length, i++){
+            ol.appendChild(lis[0]);
+        }
+        
+        ////////////////////////////////////////
+        
+        while(ul.childElementCount){
+            ol.appendChild(lis[0]);
+        } // count가 0이 되면 반복문을 빠져나감
+        
+        ////////////////////////////////////////
+        */
+       //forEach - Callback
+        lis.forEach(function(){ // 배열,object의 반복을 편리하게 해줌
+            ol.appendChild(ele);
+        });
+        
+        
+        
+    </script>
+</body>
+</html>

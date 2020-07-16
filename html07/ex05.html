@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--EVENT : DOM Level2-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+<script type="text/javascript">
+    // 이전까지 자바스크립트를 먼저 작성하면 우선 실행되어서 콘솔에는 null 찍힘
+    // Event를 통해 h1을 먼저 처리하자
+    /*
+    function func(){
+        console.log('로딩됨');
+        var h1=document.querySelector('h1');
+        console.log(h1);
+    }
+    // callback 이벤트가 onload될 때 알아서 수행되도록
+    window.onload=func;
+    */
+    ///////////////////////////////////////////////////
+    
+    // 위 내용을 수정 - 익명함수로 집어넣음
+    window.onload=function(){
+        console.log('로딩됨');
+        var h1=document.querySelector('h1');
+        console.log(h1);
+    };
+</script>
+</head>
+
+<body>
+    <h1>EVENT : DOM Level2</h1>
+    
+</body>
+</html>

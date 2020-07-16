@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <script type="text/javascript">
+        var form;
+        window.onload=function(){
+            form=document.querySelector('form');
+            // form.onsubmit=return false; // dom level2 문법
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                // 고유기능 취소, 조건: 이벤트의 첫 줄에 위치
+                console.log(e);
+                alert('이벤트 진행');
+                // return false; // dom level2 문법 (form전송 안되게 하기)
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <form action="ex12.html">
+        <button type="submit">전송</button>
+    </form>
+</body>
+</html>
