@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var table, xhr, xml, thead;
+	window.onload = function() {
+		table = document.querySelector("table");
+		thead = table.innerHTML;
+		xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() { // 일어날 callback을 정의
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				xml = xhr.responseXML;
+				console.log(xml.children[0].children); // children: 태그 , node: 텍스트까지
+				// xml.children[0].children[0].children[0].childNodes[0].nodeValue;
+				var arr = xml.children[0].children;
+				var msg = '';
+				for(var i=0; i<arr.length; i++){
+					var num = arr[i].children[0].childNodes[0].nodeValue;
+					var name = arr[i].children[1].childNodes[0].nodeValue;
+					var kor = arr[i].children[2].childNodes[0].nodeValue;
+					var eng = arr[i].children[3].childNodes[0].nodeValue;
+					var math = arr[i].children[4].childNodes[0].nodeValue;
+					msg+='<tr>';
+					msg+='<td>'+num+'</td>';
+					msg+='<td>'+name+'</td>';
+					msg+='<td>'+kor+'</td>';
+					msg+='<td>'+eng+'</td>';
+					msg+='<td>'+math+'</td>';
+					msg+='</tr>';
+				}
+				table.innerHTML = thead+msg;
+			}
+		};
+		xhr.open('post', 'stu.xml');
+		xhr.send();
+	};
+</script>
+</head>
+<body>
+	<h1>Ajax(Asynchronous JavaScript and XML)</h1>
+	<!-- 정보를 불러올때 문서 전체를 다 가져오는게 아니라 필요한 부분만 가져오는 기능 -->
+	<table>
+		<tr>
+			<th>학번</th>
+			<th>이름</th>
+			<th>국어</th>
+			<th>영어</th>
+			<th>수학</th>
+		</tr>
+	</table>
+</body>
+</html>
