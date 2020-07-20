@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+//            $('p').add('h1').css('color','red');
+//            var h1=document.getElementsByTagName('h1');
+//            $('p').add(h1).css('color','blue');
+//            var h1=$('h1'); // jq객체
+//            $('p').add(h1).css('color','blue');
+            
+            $('p').each(function(idx, ele){ // callback
+//                 두번째 인자 ele는 밑에서 사용을 안해서 생략 가능
+//                 console.log(idx,ele,this,ele===this);
+                var clr=['red','blue','gray','yellow'];
+                $(this).css('color',clr[idx]);
+//                 element===this
+//                 ele.style.color='red'; //html의 dom 엘리먼트
+            });
+            
+//            var test=['a','b','c','d'];
+//            test.forEach(function(ele.idx){
+//                console.log(idx,ele,this); // ele!==this
+//            });
+            
+//            $('p').eq(0).css('color','red').next().css('color','red')
+//                  .next().css('color','red').end()
+//                  .css('background-color','blue');
+            // end() : 이전 필터링으로 돌아감
+            
+//            $('div').children().first().parent().end().css('color','red');
+//            $('li:odd()').css('color','blue'); //홀수
+//            $('li:even()').css('color','magenta'); //짝수
+//            $("li").filter(":nth-child(3)").css("color","orange");
+           
+            /* 중요 */
+//            var content1=document.querySelector('h1+p');
+//            // find : 자손에서 찾기
+//            $('li').find('a').css('color','blue'); // li에 수행(보유하는지)
+//            $('li').has('a').css('color','red'); // a에 수행 (찾는 대상)
+//            console.log($('body').is());
+            
+//            $('h1,p').each(function(){
+//                var h1=document.querySelector('h1');
+//               console.log($(this).is('h1'), $(this)===$(h1)); 
+//            });
+            
+//            $('h1,p').not('h1').css('color','red');
+//            $('h1').nextAll().css('color','green');
+//            $('p').last().prevAll().css('color','skyblue');
+//            $('ol>li>a').parents().css('color','aqua'); // parent, parents 다름
+            $('ol>li>a').parent().siblings().css('color','red');
+        };
+    </script>
+</head>
+
+<body>
+    <h1>traversion</h1>
+    <p>내용1</p>
+    <p>내용2</p>
+    <p>내용3</p>
+    <p>내용4</p>
+    <div>
+        <ul>
+            <li>ul1</li>
+            <li>ul2</li>
+            <li>ul3</li>
+            <li>ul4</li>
+        </ul>
+        <ol>
+            <li>ol1</li>            
+            <li><a href="#">ol2</a></li>            
+            <li>ol3</li>            
+            <li>ol4</li>            
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        .cl01{
+            background-color: aquamarine
+        }
+        .cl02{
+            color: blueviolet;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            $('h1').addClass('cl01');
+            $('h1').addClass('cl02');
+            $('li').addClass('cl01');
+            $('li:gt(3)').removeClass('cl01'); // index3 => li 4보다 큰 것
+            console.log($('h1').hasClass('cl02')); // 클래스가 있는지
+        };
+    </script>
+</head>
+
+<body>
+    <h1>css class</h1>
+    <ul>
+        <li>item</li>        
+        <li>item</li>        
+        <li>item</li>        
+        <li>item</li>        
+        <li>item</li>        
+        <li>item</li>        
+        <li>item</li>        
+    </ul>
+</body>
+</html>

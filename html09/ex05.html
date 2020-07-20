@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 캐러셀: 변수화 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+    <style rel="stylesheet" type="text/css">
+
+
+
+        div>ul>li {
+            float: left;
+        }
+        div>ul>li>a {}
+        
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var imgw = 200;
+        var cnt = 3;
+        function next() {
+            var before=parseInt($('ul').css('margin-left'));
+            console.log(before);
+            if (before==-((imgw*6)-(imgw*cnt))) {
+                $('ul').css('margin-left', '0px');
+            } else {
+                $('ul').css('margin-left', before-imgw+'px');
+            }
+        }
+        window.onload = function() {
+            $('div').css('width', imgw*cnt+'px').css('height', imgw+'px').css('overflow','hidden');
+            $('div>ul').css('list-style','none').css('padding','0px').css('width',imgw*6+'px');
+            $('div>ul>li>a>img').css('width', imgw+'px');
+            window.setInterval(next, 1000);
+        }; // 변수만 변경해주면 나머지 설정을 따로 만지지 않아도 된다
+    </script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="#"><img src="img/img01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img03.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img04.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img05.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img06.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body></html>
