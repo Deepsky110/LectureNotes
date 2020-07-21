@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- onload 이벤트 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        #target{
+            background-color: gray;
+            width: 500px;
+            height: 400px;
+            overflow: scroll;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+//        window.onload=function(){
+//            $('h1').text('test');
+//        } // JS의 이벤트 이용
+        
+//        $(window).load(function(){
+//        }); // 모든 데이터가 다 받아진 상태(너무 느리다)
+        $(function(){
+            console.log('document ready'); 
+        }); // document ready를 간략하게
+        $(document).ready(function(){
+            console.log('document load');
+            $('div').scroll(function(e){
+                console.log($(this).scrollTop());
+            });
+        }); // 데이터는 다 받지 않아도 DOM에 대한 스트럭쳐가 완성 됐을 때
+        
+//        $(window).scroll(function(){
+//            console.log('scroll');
+//        });
+        $(window).resize(function(){
+            console.log('창 크기 변화');
+        });
+        $(window).unload(function(){
+            alert('다른 페이지로 이동');
+        });
+    </script>
+</head>
+
+<body>
+    <h1>onload 이벤트</h1>
+    <a href="ex01.html">link</a>
+    <div id="target">
+        <p>
+        NC 포수 양의지(33)의 도루 저지율이다. 11번 허용하고, 무려 13번을 잡아냈다.경이적인 기록이다. 10개 구단 주전 포수 중 5할대를 넘는 안방마님은 양의지가 유일하다.횟수는 절반이지만 백업포수 김태군의 도루 저지율도 0.444로 상위권이다. 5번 허용하고, 4번을 잡아냈다.난공불락의 NC 포수들. 그 견고함에 삼성 발야구가 도전장을 내밀었다.21일부터 사흘간 창원NC파크에서 열리는 선두 NC 다이노스와의 주중 3연전. 단단한 NC 마운드를 상대로 돌파구가 필요하다. 활로는 뛰는 야구다.
+        </p>
+        <p>발야구는 삼성이 자랑하는 주무기 중 하나다. 도루 시도(87차례)와 도루 수(60개) 모두 10개 구단 단연 1위다.뛰는 선수층도 다양하다.박해민이 9도루로 7년 연속 10도루를 1개 남기고 있다. 구자욱은 8도루로 6년 연속 10도루를 2개 남겨두고 있다. 김상수가 7도루, 이학주가 6도루를 기록중이다.백업 선수들도 빠른 선수가 수두룩 하다. 김지찬이 7도루를, 박승규 박찬도가 각각 4도루를 성공시켰다. 김동엽(3도루) 이성규(2도루) 등 거포들도 틈만 나면 뛸 수 있는 선수들이다.뛰는 야구에 대한 사령탑 허삼영 감독의 마인드도 확실하다. 허 감독은 "홈런을 펑펑 쳐서 점수를 낼 수 있는 상황이 아니지 않는가. 실패하더라도 계속 시도할 것"이라며 적극적 주루플레이를 독려한다. 
+        </p>
+        <p>
+        문제는 서슬 퍼런 대도 사냥꾼 양의지다. 공을 빼는 동작도 빠르고, 송구도 정확하다. 무엇보다 게임을 읽는 눈과 주자의 뛰는 타이밍 포착이 기가 막히다.선발 투수들의 퀵 모션 도움도 크다. 견제도 좋다. NC 투수들은 전반적으로 주자를 잘 묶는다.양의지 김태군 등 저격수들의 능력치와 결합해 어마어마한 도루 저지 기록을 낳고 있다.NC의 도루 허용은 단 16차례, 도루 저지는 무려 20차례다. 팀 도루저지율이 0.556에 달한다. 팀 도루 저지율이 5할이 넘는, 즉 도루 저지가 도루 허용보다 많은 유일무이 한 팀이다.리그 평균 도루 허용은 40차례, 도루 저지는 17번. 팀 평균 도루저지율이 0.298에 불과한 점을 감안하면 NC 배터리가 얼마나 견고한 지를 알 수 있다. 안정적인 선두를 달리는 숨은 비결이다.잘 뛰는 삼성과 잘 막는 NC의 최강 창과 최강 방패 간 모순 대결. 무엇이든 뚫는 창이 이길까 무엇이든 막는 방패가 이길까.3연전 성패를 가를 관전 포인트다.
+        </p>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

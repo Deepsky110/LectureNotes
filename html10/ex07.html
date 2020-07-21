@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 노드 제어 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+        window.onload=function(){
+//            var ele1 = $('ul').append('<li>add01</li>');
+//            // append후 return this의 값 ul => chaining 가능
+//            var ele2 = $('<li>add02</li>').appendTo('ul');
+            // return this 결과 li => chaining이 li에 연결됨
+            
+//            $('ul').prepend('<li>add01</li>'); // 앞에 삽입
+//            $('<li>add01</li>').prependTo('ul');
+            $('ul').before('<p>before</p>'); // 형제요소 삽입
+            $('<p>before to before</p>').insertBefore('ul');
+            
+            $('ul').after('<p>after</p>');
+            $('<p>after to after</p>').insertAfter('ul');
+//            $('ul').append('<li>add02</li>'); // 문자열 삽입
+//            $('ul').append(document.querySelector('li')); // 엘리먼트 삽입
+            
+            var ele=$('ul>li').eq(0).remove(); // detach()와 유사
+            console.log(ele);
+            $('ul').prepend(ele);
+        };
+    </script>
+</head>
+
+<body>
+    <h1>append</h1>
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+        </ul>
+    </div>
+</body>
+</html>

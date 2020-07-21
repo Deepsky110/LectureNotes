@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+	<style rel="stylesheet" type="text/css">
+        #target{
+            width: 200px;
+            overflow-x: hidden;
+            position: relative;
+        }
+        #target>a{
+            cursor: pointer;
+            opacity: 0.5;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            font-size: 4em;
+            display: inline-block;
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: deepskyblue;
+        }
+        #target>a:last-child{
+            left: 150px;
+        }
+        #target>ul{
+            list-style: none;
+            padding: 0px;
+            width: 1200px;
+        }
+        #target>ul>li{
+            float: left;
+        }
+        #target>ul>li>img{
+            width: 200px;
+        }
+    </style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+        function nextImg(){
+            $('ul>li').first().appendTo('ul');
+        }
+        function prevImg(){
+            $('ul>li').last().prependTo('ul');
+        }
+        var next;
+        window.onload=function(){
+            var prev=$('<a/>').text('<'); //jQurey 객체
+            next=$('<a/>').text('>');
+            $('#target').prepend(prev).append(next);
+            prev.click(prevImg);
+            next.click(nextImg);
+//            next.click(); // 인자를 안주면 이벤트가 바로 발생
+            setInterval(loop,1000);
+//            prev.onclick=prevImg; // JS 이벤트 사용 불가
+//            next.onclick=nextImg;
+        };
+        function loop(){
+            next.click();
+        }
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+    <div id="target">
+        <ul>
+            <li><img src="img/img01.jpg" alt=""/></li>
+            <li><img src="img/img02.jpg" alt=""/></li>
+            <li><img src="img/img03.jpg" alt=""/></li>
+            <li><img src="img/img04.jpg" alt=""/></li>
+            <li><img src="img/img05.jpg" alt=""/></li>
+            <li><img src="img/img06.jpg" alt=""/></li>
+        </ul>
+    </div>
+</body>
+</html>

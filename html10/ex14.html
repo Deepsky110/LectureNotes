@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('h1').click(function(){
+                $('h1').after('<p>내용</p>'); // p태그 생성 명령
+            });
+            $('p').click(function(){ // p태그 생성보다 이벤트가 먼저 입력
+                alert('p 클릭됨');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>현재 이벤트의 문제점</h1>
+</body>
+</html>

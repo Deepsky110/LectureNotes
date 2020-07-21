@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 마우스 이벤트 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        #target{
+            width: 500px;
+            height: 400px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('div').click(function(e){
+                console.log('click', e.clientX, e.clientY);
+//                console.log('click', e.pageX, e.pageY);
+//                console.log('click', e.screenX, e.screenY); // 좌표 기준 차이
+            });
+            $('div').mousedown(function(){
+                console.log('down');
+            });
+            $('div').mouseup(function(){
+                console.log('up');
+            });
+            $('div').dblclick(function(){
+                console.log('double click');
+            });
+            $('div').mouseover(function(e){
+                e.stopPropagation(); // 이벤트 전파 안함
+                console.log('div over');
+            });
+            $('div').mouseout(function(e){
+                e.stopPropagation();
+                console.log('div out');
+            });
+//            $(document).mouseover(function(){
+//                console.log('document over');
+//            });
+//            $(document).mouseout(function(){
+//                console.log('document out');
+//            });
+//            $('div').mouseenter(function(){
+//                console.log('div enter');
+//            });
+//            $('div').mouseleave(function(){
+//                console.log('leave');
+//            });
+            $('div').mousemove(function(e){
+                console.log(e.clientX, e.clientY);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>마우스 이벤트</h1>
+    <div id="target"></div>
+</body>
+</html>
