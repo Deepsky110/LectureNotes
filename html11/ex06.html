@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        div{
+            width: 200px;
+            background-color: aqua;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button').eq(0).click(function(){
+//                $('div').hide('slow');
+//                $('div').slideUp('slow');
+//                $('div').fadeOut('slow');
+//                $('div').slideUp(3000, callbak);
+                $('div').fadeTo(3000, 0.2);
+            });
+            $('button').eq(1).click(function(){
+//                $('div').show('fast');
+//                $('div').slideDown('slow');
+//                $('div').fadeIn('slow');
+//                $('div').slideDown(3000, function(){
+//                    $('button').eq(0).click();
+//                });
+                $('div').fadeTo(3000, 0.6);
+            });
+            $('button').eq(2).click(function(){
+//                $('div').toggle(1000, callbak);
+//                $('div').slideToggle(1000);
+                $('div').fadeToggle(1000);
+            });
+        });
+        function callbak(){
+            alert('끝');
+        }
+    </script>
+</head>
+
+<body>
+    <h1>animation</h1>
+    <button>hide</button>
+    <button>show</button>
+    <button>toggle</button>
+    <div>
+        지금까지 2020시즌은 멜 로하스 주니어(30·KT 위즈)의 해다. 리그 최고 타자로 군림하고 있기에 KT도 열기에 적극적으로 부채질을 하고 있다. 로하스는 자신만을 위한 유니폼에 감격했다.
+        KT는 21일 수원 LG 트윈스전에서 10-9로 극적인 승리를 거뒀다. 7회초까지 1-8로 뒤지며 패색이 짙었지만 7회말 대거 8득점으로 경기를 뒤집었다. 하위타선에서 붙은 불은 로하스의 동점포로 절정까지 향했고, 천성호의 역전 적시타까지 나왔다. 9회초 동점 솔로포를 허용하며 분위기가 축 가라앉았지만 9회말 이내 로하스가 끝내기 홈런을 때려냈다. 7회에는 좌완 진해수, 9회에는 우완 여건욱에게 홈런을 넘겼다. 5월 23일 잠실 LG전에 이어 올해만 두 번째이자 리그 역대 4호(서동욱·로하스 각 2회) 좌우 연타석 홈런 진기록이었다.
+        그야말로 맹타다. 65경기에서 타율 0.395(261타수 103안타), 24홈런, 63타점, OPS(출루율+장타율) 1.201. KBO가 공식 시상하는 8개 지표인 타율, 홈런, 타점, 도루, 득점, 안타, 출루율, 장타율 중 도루를 제외한 7개 부문 1위다. 리그 폭격이라는 표현이 과하지 않다.
+    </div>
+</body></html>

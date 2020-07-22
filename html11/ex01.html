@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- event binding -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        #target{
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            /*
+            var a = document.querySelector('a');
+              a.onclick=function(){return=true};
+              onclick이라는 본래 메서드를 재정의
+            
+            // DOM level2
+            a.onclick=function(){ // a태그의 onclick이라는 속성
+                return=false; // 리턴 값을 주지 않아도 리턴만 안할뿐 작동함
+            };
+            // DOM level3
+            a.addEventListener('click',function(e){
+                e.preventDefault(); // 엘리먼트의 고유 기능 취소
+            });
+            */
+            
+            $('#target').on('click', function(e){
+                // callback은 언제 실행될지 몰라서 제어력이 떨어짐
+                e.preventDefault(); // 꼭 첫줄에 써줄 것!
+                console.log('클릭'); 
+                return false; // dom level2에서 쓰이던 기능이라 추가됨
+                // 확실하게 작동시키려면 e.preventDefault() 사용 권장
+            });
+//            $('#target').click(function(){
+//                console.log('click메서드 a');
+//                return false;
+//            });
+            $('#target').click(function(){
+                console.log('또다른 click 메서드');
+            });
+            // jq의 이벤트 처리는 dom level3
+            // dom level2라면 중복된 click메서드가 덮어쓰기 처리 되어야 하는데
+            // level3라 둘 다 표시됨
+        });
+    </script>
+</head>
+
+<body>
+    <h1>이벤트 바인딩</h1>
+    <div id="target">
+        <a href="http://naver.com">link</a>
+    </div>
+</body>
+</html>

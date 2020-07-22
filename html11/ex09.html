@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        div{
+            width: 40px;
+            height: 50px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        function callbak(){
+            alert('종료');
+        }
+        var lav=$('<span/>');
+        $(document).ready(function(){
+//            $('div').animate({'width':'500px'},3000,'swing',callbak);
+            $('div').animate({'width':'500px'},{'duration':3000, 'easing':'swing','complete':callbak
+//                ,'step':function(){
+//                console.log('step',a,b);
+//            }
+            ,'progress':function(a,b,c){
+                console.log('progress', a,b,c); // 100을 기준으로 진행수치
+                $(lav).text(parseInt(b*100)+"%"); // 진행 %
+//                $('div').text(parseInt(c/100)/10+"초"); // 남은시간
+            }
+            ,'start':function(){
+                $('div').append(lav);   
+            }                   
+                                               });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>animate</h1>
+    <div>box</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- bxSlider 플러그인 사용 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css"/>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                slideWidth: 320 // 슬라이드의 사이즈를 지정했기 때문에
+                ,'minSlides': 2    // min,max값 지정 가능 (세 옵션은 set)
+                ,'maxSlides': 3
+                ,'moveSlides': 1
+                ,'mode': 'horizontal'
+                ,'speed': 3000
+//                ,'startSlide': 5 // 0부터
+//                ,'randomStart': true
+//                ,'captions': true // 추가설명
+//                ,'auto': true
+//                ,'pause': 2000 // 기본값 4초, auto랑 사용
+//                ,'autoHover': true
+//                ,'stopAutoOnClick': true
+//                ,'controls': true //default가 true - 다음,이전 버튼 생성
+//                ,'nextText': '다음'
+//                ,'prevText': '이전'
+//                ,'autoControls': true
+//                ,'pager': true // false 진행상황 알리는 동그라미 사라짐
+                ,'onSliderLoad':function(idx){
+                    console.log('bx loading...'+idx);
+                }
+                ,'onSliderResize':function(idx){
+                    console.log('resizing...'+idx);
+                }
+                ,'onSlideNext':function(ele,b,a){
+                    console.log('next slide...',b,a,ele.html());
+                }
+                ,'onSlideAfter':function(ele,b,a){
+                    console.log('after...',b,a,ele.html());
+                }
+                ,'onSlideBefore':function(ele,b,a){
+                    console.log('before...',b,a,ele.html());
+                }
+                
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="slider">
+        <div><img src="img/img01.jpg" title="호주청정우" alt=""/></div>
+        <div><img src="img/img02.jpg" title="귤" alt=""/></div>
+        <div><img src="img/img03.jpg" title="서큘레이터" alt=""/></div>
+        <div><img src="img/img04.jpg" title="다우니" alt=""/></div>
+        <div><img src="img/img05.jpg" title="모여봐요 동물의 숲" alt=""/></div>
+        <div><img src="img/img06.jpg" title="배변패드" alt=""/></div>
+    </div>
+</body></html>

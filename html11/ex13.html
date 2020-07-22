@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Title </title>
+    <style rel="stylesheet" type="text/css">
+        .slider{}
+        .slider+span{
+            position: relative;
+            background-color: deepskyblue;
+            top:0px;
+        }
+    </style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        var bx;
+        $(document).ready(function(){
+            bx=$('.slider').bxSlider({
+                'pager':false,
+                'controls':false
+            });
+            $('<a/>').insertAfter('.bx-wrapper').text('다음').click(function(){
+                bx.goToNextSlide();
+            });
+            $('<a/>').insertAfter('.bx-wrapper').text('이전').click(function(){
+                bx.goToPrevSlide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="slider">
+        <div><img src="img/img01.jpg" title="호주청정우" alt=""/></div>
+        <div><img src="img/img02.jpg" title="귤" alt=""/></div>
+        <div><img src="img/img03.jpg" title="서큘레이터" alt=""/></div>
+        <div><img src="img/img04.jpg" title="다우니" alt=""/></div>
+        <div><img src="img/img05.jpg" title="모여봐요 동물의 숲" alt=""/></div>
+        <div><img src="img/img06.jpg" title="배변패드" alt=""/></div>
+    </div>
+</body>
+</html>
