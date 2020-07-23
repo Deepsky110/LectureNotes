@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax('ex01.jsp',{ // jQuery의 기본 통신은 ajax
+			'type': 'post'
+			,'data':'name=thumb&cnt=2'
+			,'dataType':'html' // 'success':function의 인자 dataType을 결정
+			,'error': function(jqXHR, textStatus, errorThrown){
+				// 주로 jqXHR 사용
+				// jqXHR =>
+				// 		1. status: http 오류 번호 출력(500, 404등)
+				//		2. statusText: 오류 내용 텍스트 (errorThrown)
+				//		3. responseText: url의 response full text 출력
+				//		4. readyState: ajax readyState 출력
+				// textStatus => "timeout", "error", "abort", and "parsererror"
+				// errorThrown => 4xx, 5xx 에러메세지
+				console.log(jqXHR, textStatus, errorThrown);
+			}
+			,'success':function(data, status, xhr){
+				console.log(typeof data, data, status, xhr);
+				$('#target').append(data);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>ajax통신</h1>
+	<div id="target"></div>
+</body>
+</html>
